@@ -1,6 +1,8 @@
-# PRODUCTION APP IMAGE
-# ------------------------------------------------------------------------------------
 FROM debian:bookworm-slim AS prod
+
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static /tini
+RUN chmod +x /tini
 
 ARG EXEC_ENV
 ENV EXEC_ENV=$EXEC_ENV

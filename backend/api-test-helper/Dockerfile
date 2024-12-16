@@ -1,5 +1,9 @@
 FROM debian:bookworm-slim AS prod
 
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static /tini
+RUN chmod +x /tini
+
 ARG DATABASE_URL
 ENV DATABASE_URL=$DATABASE_URL
 ARG API_TEST_HELPER_HOST

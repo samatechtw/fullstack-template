@@ -18,7 +18,6 @@ import { ts } from '../i18n'
 
 .not-found {
   color: $text1;
-  min-height: 480px;
   text-align: center;
   padding-top: 220px;
   position: relative;
