@@ -13,7 +13,6 @@ ENV DATABASE_URL=$DATABASE_URL
 
 WORKDIR /usr/src/backend/db-app/
 
-COPY --from=base /tini /tini
 COPY backend/db-app/migrations ./migrations/
 COPY --chmod=755 ./backend/target/release/db-app ./
 

@@ -13,7 +13,6 @@ ENV API_TEST_HELPER_PORT=$API_TEST_HELPER_PORT
 ARG APP_AUTH_SECRET
 ENV APP_AUTH_SECRET=$APP_AUTH_SECRET
 
-COPY --from=base /tini /tini
 COPY --chmod=755 ./backend/target/release/api-test-helper /
 ENTRYPOINT ["/tini", "--"]
 CMD ["./api-test-helper"]

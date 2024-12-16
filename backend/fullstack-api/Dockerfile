@@ -31,7 +31,6 @@ ENV S3_SECRET_ACCESS_KEY=$S3_SECRET_ACCESS_KEY
 ARG SENDGRID_API_KEY
 ENV SENDGRID_API_KEY=$SENDGRID_API_KEY
 
-COPY --from=base /tini /tini
 COPY --chmod=755 ./backend/target/release/fullstack-api /
 ENTRYPOINT ["/tini", "--"]
 CMD ["/fullstack-api"]

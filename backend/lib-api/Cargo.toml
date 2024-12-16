@@ -35,7 +35,7 @@ tracing-subscriber = { workspace = true }
 tracing-appender = { workspace = true }
 tracing-bunyan-formatter = { workspace = true }
 uuid = { workspace = true }
-validator = "0.18.1"
+validator = "0.19"
 regex = { workspace = true }
 rusty-s3 = { workspace = true }
 tower = { workspace = true }
