@@ -1,11 +1,11 @@
 <template>
-  <div class="terms-wrap">
+  <div class="terms-wrap blog-wrap">
     <div class="blog-content">
       <h1 class="terms-title blog-title">Terms of Service</h1>
       <div class="blog-label">Last Updated: Dec. 14, 2024</div>
       <div class="blog-text">
         Welcome to
-        <a href="https://fullstack-template.com">https://fullstack-template.com</a> These
+        <a href="https://fullstack-template.com">https://fullstack-template.com</a>. These
         Terms of Service ("Terms") govern your access to and use of our website, mobile
         application, and any related services (collectively, the "Service"). By accessing
         or using the Service, you agree to be bound by these Terms. If you do not agree to
@@ -123,13 +123,3 @@
     </div>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.terms-wrap {
-  background-color: white;
-}
-.terms-title {
-  font-size: 48px;
-  padding: 110px 0 64px;
-}
-</style>

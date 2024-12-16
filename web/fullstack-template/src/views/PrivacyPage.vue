@@ -1,5 +1,5 @@
 <template>
-  <div class="privacy-wrap">
+  <div class="privacy-wrap blog-wrap">
     <div class="blog-content">
       <h1 class="privacy-title blog-title">Privacy Policy</h1>
       <div class="blog-label">Last Updated: Dec. 14, 2024</div>
@@ -37,16 +37,3 @@
     </div>
   </div>
 </template>
-
-<style lang="postcss" scoped>
-.privacy-wrap {
-  background-color: white;
-}
-.page-bg {
-  height: 340px;
-}
-.privacy-title {
-  font-size: 48px;
-  padding: 110px 0 64px;
-}
-</style>
