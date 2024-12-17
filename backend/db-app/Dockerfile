@@ -1,6 +1,8 @@
-# PRODUCTION APP IMAGE
-# ------------------------------------------------------------------------------------
 FROM debian:bookworm-slim AS prod
+
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static /tini
+RUN chmod +x /tini
 
 ARG EXEC_ENV
 ENV EXEC_ENV=$EXEC_ENV
@@ -11,7 +13,6 @@ ENV DATABASE_URL=$DATABASE_URL
 
 WORKDIR /usr/src/backend/db-app/
 
-COPY --from=base /tini /tini
 COPY backend/db-app/migrations ./migrations/
 COPY --chmod=755 ./backend/target/release/db-app ./
 

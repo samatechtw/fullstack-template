@@ -2,6 +2,10 @@
 FROM debian:bookworm-slim AS prod
 WORKDIR /
 
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static /tini
+RUN chmod +x /tini
+
 ARG EXEC_ENV
 ENV EXEC_ENV=$EXEC_ENV
 ARG DATABASE_URL
@@ -27,7 +31,6 @@ ENV S3_SECRET_ACCESS_KEY=$S3_SECRET_ACCESS_KEY
 ARG SENDGRID_API_KEY
 ENV SENDGRID_API_KEY=$SENDGRID_API_KEY
 
-COPY --from=base /tini /tini
 COPY --chmod=755 ./backend/target/release/fullstack-api /
 ENTRYPOINT ["/tini", "--"]
 CMD ["/fullstack-api"]

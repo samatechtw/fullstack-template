@@ -8,9 +8,22 @@
 
 This is a rough template for a full stack app, using Vue3 for the frontend and Rust/Axum for the backend API.
 
-Clone or copy/paste all files, and choose a name for your app (e.g. Cool App). Replace text according this table in order (case sensitive):
+1. Clone or copy/paste all files, and choose a name for your app (e.g. Cool App). Replace text according this table in order (case sensitive):
 
-Finally, rename the `backend/fullstack-api` folder to `backend/cool-api`, and update information in the Readme/package.json.
+| Find                  | Replace                    |
+| --------------------- | -------------------------- |
+| frontend-template.com | cool-app.com (your domain) |
+| learn-frontend        | cool-app                   |
+| Learn Frontend        | Cool App                   |
+| learn-api             | cool-api                   |
+| Learn API             | Cool API                   |
+| api-learn             | api-cool                   |
+| learn_api             | learn_api                  |
+| learn-ci              | cool-ci                    |
+
+2. Rename the `backend/fullstack-api` folder to `backend/cool-api`, and update information in the Readme/package.json.
+
+3. Provide `S3_SECRET_ACCESS_KEY` and `SENDGRID_API_KEY`, if you plan to use email or object storage features.
 
 #### Prerequisites
 
