@@ -18,6 +18,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@samatech/fetch-api": "catalog:",
     "@samatech/vue-store": "catalog:",
     "vue": "catalog:",
     "date-fns": "catalog:",
@@ -26,7 +27,7 @@
     "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@rollup/plugin-terser": "catalog:",
+    "terser": "catalog:",
     "@samatech/postcss-basics": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "postcss": "catalog:",

@@ -1,5 +1,4 @@
 use axum::{
-    async_trait,
     extract::FromRequestParts,
     http::{request::Parts, StatusCode},
 };
@@ -14,7 +13,6 @@ pub mod user;
 // https://github.com/tokio-rs/axum/issues/434#issuecomment-954898159
 pub struct Qs<T>(pub T);
 
-#[async_trait]
 impl<S, T> FromRequestParts<S> for Qs<T>
 where
     S: Send + Sync,
