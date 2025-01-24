@@ -6,14 +6,17 @@ use lib_api::{
 };
 use sqlx::{PgPool, Postgres, Transaction};
 
-use super::{
-    user_repo::{DynUserRepo, UserRepo},
-};
+use super::user_repo::{DynUserRepo, UserRepo};
 
 #[derive(Clone)]
 pub struct AppRepo {
     pub db: PgPool,
     pub user: DynUserRepo,
+}
+
+pub async fn start_transaction(db: &PgPool) -> Result<Transaction<'_, Postgres>, DbError> {
+    let transaction = db.begin().await.map_err(|e| DbError::SqlxError(e))?;
+    Ok(transaction)
 }
 
 impl AppRepo {
@@ -28,11 +31,8 @@ impl AppRepo {
     }
 
     pub async fn start_transaction(&self) -> Result<Transaction<'_, Postgres>, ApiError> {
-        let transaction = self
-            .db
-            .begin()
+        start_transaction(&self.db)
             .await
-            .map_err(|e| ApiError::internal_error().message(e))?;
-        Ok(transaction)
+            .map_err(|e| ApiError::internal_error().message(e))
     }
 }

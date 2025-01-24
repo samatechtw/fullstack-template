@@ -133,7 +133,7 @@ jobs:
           if-no-files-found: error
           retention-days: 3
 
-  build-docker-api-fullstack:
+  build-docker-fullstack-api:
     needs: [pre_job, build-backend, build-apps]
     if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
     name: Fullstack API Production Image
@@ -226,7 +226,7 @@ jobs:
   fullstack-api-tests:
     needs:
       - build-docker-db-app
-      - build-docker-api-fullstack
+      - build-docker-fullstack-api
       - build-docker-api-test-helper
     name: API Request Tests
     runs-on: ubuntu-22.04
@@ -254,7 +254,7 @@ jobs:
           COMMAND="kubectl logs deploy/fullstack-api"
           $COMMAND || $COMMAND || $COMMAND
           kubectl get pods
-          NODE_OPTIONS=--dns-result-order=ipv4first EXEC_ENV=ci ./web/backend-test/node_modules/.bin/vitest run -r ./web/backend-test
+          NODE_OPTIONS=--dns-result-order=ipv4first EXEC_ENV=ci ./web/api-test/node_modules/.bin/vitest run -r ./web/api-test
 
   clear-artifacts:
     needs: [fullstack-api-tests]

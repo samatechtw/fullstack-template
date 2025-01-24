@@ -1,5 +1,4 @@
 import Vue from '@vitejs/plugin-vue'
-import terser from '@rollup/plugin-terser'
 import { defineConfig } from 'vite'
 import path from 'path'
 import { tsconfigBaseAliases } from './tsconfig-base-aliases'
@@ -23,9 +22,8 @@ export default defineConfig({
     outDir: './dist',
     emptyOutDir: true,
     sourcemap: true,
-    minify: true,
+    minify: 'terser',
     rollupOptions: {
-      plugins: [terser()],
       output: {
         format: 'es',
         dir: 'dist',

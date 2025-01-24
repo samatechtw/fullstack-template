@@ -141,9 +141,9 @@ describe('Get User', () => {
   })
 
   test('returns 404 when user does not exist', async () => {
-    const noneExistId = '870aafc9-36e9-476a-b38c-c1aaaad9d9fe'
+    const nonExistId = '870aafc9-36e9-476a-b38c-c1aaaad9d9fe'
     await api
-      .get(`${testEndpoint}/${noneExistId}`)
+      .get(`${testEndpoint}/${nonExistId}`)
       .set('Authorization', adminAuth)
       .expect(404, {
         code: 'None',

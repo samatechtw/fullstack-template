@@ -10,16 +10,15 @@ This is a rough template for a full stack app, using Vue3 for the frontend and R
 
 1. Clone or copy/paste all files, and choose a name for your app (e.g. Cool App). Replace text according this table in order (case sensitive):
 
-| Find                  | Replace                    |
-| --------------------- | -------------------------- |
-| frontend-template.com | cool-app.com (your domain) |
-| learn-frontend        | cool-app                   |
-| Learn Frontend        | Cool App                   |
-| learn-api             | cool-api                   |
-| Learn API             | Cool API                   |
-| api-learn             | api-cool                   |
-| learn_api             | learn_api                  |
-| learn-ci              | cool-ci                    |
+| Find                   | Replace                    |
+| ---------------------- | -------------------------- |
+| fullstack-template.com | cool-app.com (your domain) |
+| fullstack-template     | cool-app                   |
+| Fullstack Template     | Cool App                   |
+| fullstack-api          | cool-api                   |
+| Fullstack API          | Cool API                   |
+| fullstack_api          | learn_api                  |
+| fullstack-ci           | cool-ci                    |
 
 2. Rename the `backend/fullstack-api` folder to `backend/cool-api`, and update information in the Readme/package.json.
 

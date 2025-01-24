@@ -21,5 +21,13 @@ export default {
     ],
     'declaration-empty-line-before': null,
     'rule-empty-line-before': null,
+    'declaration-property-value-no-unknown': [
+      true,
+      {
+        ignoreProperties: {
+          '/.+/': '/([$])|(v-bind).+/',
+        },
+      },
+    ],
   },
 }

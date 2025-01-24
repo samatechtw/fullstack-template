@@ -62,9 +62,9 @@
 
 <script setup lang="ts">
 import { computed, ref, toRefs, useId } from 'vue'
-import { IconButtonWrap } from '@frontend/components/widgets'
 import { Cross, Info } from '@frontend/components/svg'
 import InfoBubble from './InfoBubble.vue'
+import IconButtonWrap from './IconButtonWrap.vue'
 
 const props = withDefaults(
   defineProps<{

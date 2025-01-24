@@ -90,7 +90,7 @@ describe('Update Password endpoint', () => {
         .send({ password: 'some34.password234', unknown_prop: 'some value' })
         .expect(400, {
           status: 400,
-          message: 'Failed to deserialize the JSON body into the target type',
+          message: 'unknown field `unknown_prop`, expected `password`',
           code: 'InvalidFormData',
         })
     })

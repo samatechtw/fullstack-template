@@ -5,7 +5,7 @@ use lib_api::db::db_error::DbError;
 use lib_api::db::util::commit_or_rollback;
 use lib_api::error::api_error::ApiError;
 use lib_api::error::helpers::check_bad_form;
-use lib_api::util::json_extractor::PnJson;
+use lib_api::util::json_extractor::StJson;
 use lib_types::dto::user::register_user_dto::{RegisterUserDto, RegisterUserResponse};
 use lib_types::entity::user_entity::UserCreateResult;
 use lib_types::shared::api_error::ApiErrorCode;
@@ -20,7 +20,7 @@ fn to_api_response(result: UserCreateResult) -> Json<RegisterUserResponse> {
 
 pub async fn register_user(
     State(context): State<ApiContext>,
-    PnJson(dto): PnJson<RegisterUserDto>,
+    StJson(dto): StJson<RegisterUserDto>,
 ) -> Result<(StatusCode, Json<RegisterUserResponse>), ApiError> {
     let email = dto.email.clone();
     check_bad_form(dto.validate())?;

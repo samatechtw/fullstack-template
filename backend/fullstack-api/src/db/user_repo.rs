@@ -1,6 +1,6 @@
 use std::sync::Arc;
 
-use axum::async_trait;
+use async_trait::async_trait;
 use const_format::formatcp;
 use lib_api::db::{
     db_error::{map_sqlx_err, DbError},

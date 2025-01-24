@@ -32,4 +32,6 @@ log
 # Local Netlify folder
 .netlify
 
+.madgerc
+
 analyse.html
