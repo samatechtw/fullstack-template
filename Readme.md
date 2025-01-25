@@ -22,7 +22,9 @@ This is a rough template for a full stack app, using Vue3 for the frontend and R
 
 2. Rename the `backend/fullstack-api` folder to `backend/cool-api`, and update information in the Readme/package.json.
 
-3. Provide `S3_SECRET_ACCESS_KEY` and `SENDGRID_API_KEY`, if you plan to use email or object storage features.
+3. Rename the `web/fullstack-template` folder to `web/cool-app`, and update information in the Readme/package.json.
+
+4. Provide `S3_SECRET_ACCESS_KEY` and `SENDGRID_API_KEY`, if you plan to use email or object storage features.
 
 #### Prerequisites
 
