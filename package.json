@@ -36,9 +36,9 @@
   "homepage": "https://github.com/samatechtw/fullstack-template#Readme.md",
   "author": "Sam Pullman",
   "devDependencies": {
-    "oxlint": "^0.15.7",
-    "prettier": "^3.4.2",
-    "stylelint": "^16.13.2",
+    "oxlint": "^0.16.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.16.0",
     "stylelint-config-recommended-vue": "^1.6.0"
   }
 }
