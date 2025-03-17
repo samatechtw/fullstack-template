@@ -161,11 +161,6 @@ a.active {
   align-items: stretch;
   margin: 0 auto;
 }
-.footer-top {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-}
 .footer-left {
   max-width: 300px;
 }
@@ -246,10 +241,6 @@ a.active {
   .footer-content {
     padding: 48px 40px 48px;
   }
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-  }
   .footer-cols {
     margin: 48px 0 0 0;
   }
@@ -269,28 +260,8 @@ a.active {
   .footer-wrap {
     overflow: hidden;
   }
-  .footer-bg {
-    object-position: 49.9% 8.7%;
-    transform: scale(2);
-  }
-}
-@media (max-width: 700px) {
-  .footer-bg {
-    object-position: 49.9% 0%;
-    transform: scale(2);
-  }
-}
-@media (max-width: 700px) {
-  .footer-bg {
-    object-position: 49.9% -10%;
-    transform: scale(2);
-  }
 }
 @media (max-width: 510px) {
-  .footer-bg {
-    object-position: 49.9% 140px;
-    transform: scale(3);
-  }
   .footer-cols {
     flex-direction: column;
     margin-top: 24px;
@@ -306,9 +277,6 @@ a.active {
   .label {
     margin-top: 16px;
   }
-  .empty-label {
-    display: none;
-  }
   .footer-left {
     display: flex;
     flex-direction: column;
@@ -319,12 +287,6 @@ a.active {
   }
   .bottom-divider {
     margin: 0 10px;
-  }
-}
-@media (max-width: 460px) {
-  .footer-bg {
-    object-position: 49.9% 220px;
-    transform: scale(3);
   }
 }
 </style>

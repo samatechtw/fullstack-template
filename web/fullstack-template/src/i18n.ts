@@ -80,7 +80,7 @@ const fallback: I18nObject = {
     title: 'Settings',
   },
   footer: {
-    copyright: '© 2024 Fullstack Template - All Rights Reserved.',
+    copyright: '© 2025 Fullstack Template - All Rights Reserved.',
     title: 'Frontend Vue3 app template',
     text: 'Built with Vue, Vite, and Postcss. Get started instantly with a full featured template.',
     col1: 'Resources',
